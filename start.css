@@ -1,0 +1,33 @@
+
+
+.bottom-menu {
+    display: flex;
+    align-items: center;
+    cursor: not-allowed;
+}
+
+
+.locked-menu:hover {
+    background-color: rgb(246, 242, 247);
+}
+
+.lock {
+    width: 22px;
+    height: 22px;
+    padding-left: 3px;
+    display:block;
+    transform: translateY(4px);
+
+}
+
+
+.sun {
+    width: 18px;
+    height: 18px;
+}
+
+.nightmode {
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

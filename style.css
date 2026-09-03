@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: rgb(246, 242, 247);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 10px 0;
+}
+
+main{
+        margin: 0 auto; /* Auto miðjar sjálfan sig*/
+        width: 99.5%;
+        min-height: 85vh;
+        border-radius: 20px;
+        outline: 1px solid rgba(0, 0, 0, 0.2);
+        display: grid;
+        grid-template-columns: 59% 39%;
+        align-items: center;
+        column-gap: 2%; /* Reiknað 2%+ 59%+39% =100% af breidd*/
+        padding: 0 10px;
+}
+
+section {
+    background-color: rgb(252, 249, 252);
+    border-radius: 20px;
+    width: 100%;
+    min-height: 80vh;
+    text-align: center;
+    line-height: 1.6;
+}
+
+section:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center; /*hvernig content sitja lóðrétt*/
+}
+
+section:nth-of-type(2) {
+    display: grid;
+    place-items: center;
+}
+
+.login{
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    line-height: 1.6;
+    width: 70%;  
+    gap: 15px;
+}
+
+form {
+ width: 100%;    
+ display:grid;
+gap: 10px;
+}
+
+input,
+button {
+    width: 100%;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid rgb(210, 205, 215);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login a,
+.login p {
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) /* Þegar glugginn verður 600px eða minni */
+{ 
+    main {
+        grid-template-columns: 100%; /* Búa til 1 dálk í main*/
+    }
+}
+
+.intro {
+    padding-left:20px;
+}
+
+
+footer {
+    background-color: rgb(246, 242, 247);
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav {
+    width: 99.5%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: rgb(110, 100, 115);
+    text-align: center;
+    font-size: 12px ;
+
+}
+
+nav a:hover {
+    color: rgb(190, 110, 170);
+}
+
+
+nav a:first-child {
+    text-align: left;
+}
+
+nav a:last-child {
+    text-align: right;
+}
+
+.copyright {
+color: rgb(110, 100, 115);
+font-size: 12px;
+padding: 10px 0;
+}
+
+@media (max-width: 700px) {
+    nav {
+        grid-template-columns: repeat(4, auto);
+        gap: 10px;
+    }
+}

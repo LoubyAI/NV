@@ -1,0 +1,360 @@
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: rgb(246, 242, 247);
+    font-family: Arial, sans-serif;
+}
+
+body.dark-mode {
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+body.dark-mode .dropdown-menu a,
+body.dark-mode .locked-menu,
+body.dark-mode .logo a,
+body.dark-mode .copyright,
+body.dark-mode .menu-link,
+body.dark-mode .category summary,
+body.dark-mode .category a {
+    color: white;
+}
+
+
+body.dark-mode .dropdown-menu,
+body.dark-mode .categories,
+body.dark-mode .content {
+    background-color: rgb(45, 45, 45);
+}
+
+
+body.dark-mode .top-menu,
+body.dark-mode .bottom-menu,
+body.dark-mode .guide-card {
+    background-color: rgb(50, 50, 50);
+}
+
+body.dark-mode .dropdown-menu a:hover,
+body.dark-mode .menu-link:hover,
+body.dark-mode .category summary:hover,
+body.dark-mode .locked-menu:hover,
+body.dark-mode .category a:hover {
+    background-color: rgb(60, 60, 60);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    padding: 10px 20px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    justify-self: start;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* PROFILE MENU */
+
+.profile-menu {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.profile-menu details {
+    position: relative;
+}
+
+.profile-menu summary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+
+/* PROFILE IMAGE */
+
+.profile-image {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* PROFILE ARROW */
+
+.profile-arrow {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    transition: transform 0.3s;
+}
+
+details[open] .profile-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* PROFILE DROPDOWN */
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 45px;
+
+    display: grid;
+
+    padding: 12px;
+
+    background-color: white;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 8px;
+    border-radius: 6px;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(246, 242, 247);
+}
+
+.sun {
+    width: 18px;
+    height: 18px;
+}
+
+.nightmode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    margin: 0 auto;
+    width: 99.5%;
+    min-height: 82vh;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+
+/* =========================
+   VINSTRI DÁLKUR
+   CATEGORIES / MENU
+========================= */
+
+.categories {
+    padding: 20px 18px;
+
+    background-color: white;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ALLIR LINKAR Í VINSTRI MENU */
+
+.categories a {
+    display: block;
+
+    text-decoration: none;
+    color: rgb(110, 100, 115);
+
+    padding: 8px 8px;
+    border-radius: 6px;
+}
+
+
+/* AÐAL MENU LINKAR
+   Byrja hér / Hugmyndabanki / Fréttir
+*/
+
+.menu-link {
+    color: black;
+    padding: 10px 0;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.menu-link:hover {
+    background-color: rgb(246, 242, 247);
+}
+
+.top-menu {
+    padding: 8px 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* HITTINGAR FYRIRSÖGN */
+
+
+.bottom-menu {
+    margin-top: 20px;
+    padding: 8px 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.categories h2 {
+    padding: 8px;
+    margin-top: 10px;
+}
+
+
+/* ÁHUGAMÁLAFLOKKAR */
+
+.category {
+    margin-top: 20px;
+}
+
+
+/* TITLAR FLOKKANNA
+   Samkomur / Hreyfing / Textíl / Dekurkvöld
+*/
+
+.category summary {
+    cursor: pointer;
+    font-weight: bold;
+
+    list-style: none;
+
+    padding: 8px 8px;
+    border-radius: 6px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+/* FJARLÆGIR SJÁLFGEFNA ÖR Á DETAILS */
+
+.category summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* HOVER Á FLOKKSTITLUM */
+
+.category summary:hover {
+    background-color: rgb(246, 242, 247);
+}
+
+
+/* HOVER Á UNDIRÁHUGAMÁLUM */
+
+.category a:hover {
+    background-color: rgb(246, 242, 247);
+}
+
+
+/* =========================
+   HÆGRI DÁLKUR
+   CONTENT
+========================= */
+
+.content {
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.start-here {
+    width: 80%;
+}
+
+.start-here h1 {
+    margin-bottom: 12px;
+}
+
+.start-here  p {
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.guide-card {
+    padding: 20px;
+    margin-bottom: 16px;
+
+    border-radius: 10px;
+    background-color: rgb(246, 242, 247);
+}
+
+.guide-card h2 {
+    margin-bottom: 8px;
+}
+
+.guide-card p {
+    line-height: 1.5;
+}
+
+
+/* =========================
+    FOOTER
+========================= */
+
+footer {
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    color: rgb(110, 100, 115);
+    min-height: 8vh;
+}
+
+.copyright {
+    color: rgb(110, 100, 115);
+    padding-top: 20px;
+}
